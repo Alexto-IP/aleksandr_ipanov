@@ -7,7 +7,7 @@ export default function Contact() {
       <SectionHeading eyebrow="// на связи" title="Контакты" />
 
       <p className="reveal mt-6 max-w-xl text-blueprint-dim">
-        Открыт к предложениям о продуктовой работе на React/Vue/TypeScript — удалённо или гибрид в Санкт-Петербурге.
+        Открыт к предложениям
       </p>
 
       <div className="mt-8 grid gap-3 sm:grid-cols-2">
