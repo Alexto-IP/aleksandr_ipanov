@@ -1,13 +1,15 @@
-import { education } from '../data/resume'
+import { useLanguage } from '../i18n/LanguageContext'
 import SectionHeading from './SectionHeading'
 
 export default function Education() {
+  const { t } = useLanguage()
+
   return (
     <section id="education" className="mx-auto max-w-5xl px-6 py-20">
-      <SectionHeading eyebrow="// образование" title="Образование и квалификация" />
+      <SectionHeading eyebrow={t.sections.education.eyebrow} title={t.sections.education.title} />
 
       <div className="mt-10 space-y-6">
-        {education.map((e, i) => (
+        {t.education.map((e, i) => (
           <div
             key={i}
             className="reveal flex flex-col gap-1 border-b border-blueprint-line/60 pb-6 sm:flex-row sm:items-baseline sm:justify-between"
@@ -24,7 +26,7 @@ export default function Education() {
                   rel="noreferrer"
                   className="mt-2 inline-block font-mono text-xs text-blueprint-cyan hover:text-blueprint-cyanDim"
                 >
-                  {e.hrefLabel ?? 'Подробнее →'}
+                  {e.hrefLabel ?? t.educationDefaultLink}
                 </a>
               )}
             </div>

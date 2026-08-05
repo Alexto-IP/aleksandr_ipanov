@@ -1,17 +1,17 @@
-import { contacts } from '../data/resume'
+import { useLanguage } from '../i18n/LanguageContext'
 import SectionHeading from './SectionHeading'
 
 export default function Contact() {
+  const { t } = useLanguage()
+
   return (
     <section id="contact" className="mx-auto max-w-5xl px-6 py-20">
-      <SectionHeading eyebrow="// на связи" title="Контакты" />
+      <SectionHeading eyebrow={t.sections.contact.eyebrow} title={t.sections.contact.title} />
 
-      <p className="reveal mt-6 max-w-xl text-blueprint-dim">
-        Открыт к предложениям
-      </p>
+      <p className="reveal mt-6 max-w-xl text-blueprint-dim">{t.sections.contact.intro}</p>
 
       <div className="mt-8 grid gap-3 sm:grid-cols-2">
-        {contacts.map((c, i) => (
+        {t.contacts.map((c, i) => (
           <a
             key={c.label}
             href={c.href}

@@ -1,13 +1,15 @@
-import { projects } from '../data/resume'
+import { useLanguage } from '../i18n/LanguageContext'
 import SectionHeading from './SectionHeading'
 
 export default function Projects() {
+  const { t } = useLanguage()
+
   return (
     <section id="projects" className="mx-auto max-w-5xl px-6 py-20">
-      <SectionHeading eyebrow="// репозитории" title="Проекты" />
+      <SectionHeading eyebrow={t.sections.projects.eyebrow} title={t.sections.projects.title} />
 
       <div className="mt-10 grid gap-4 md:grid-cols-2">
-        {projects.map((p, i) => (
+        {t.projects.map((p, i) => (
           <div
             key={p.name}
             className="scan-line reveal group rounded-sm border border-blueprint-line bg-blueprint-panel/40 p-6 transition-colors hover:border-blueprint-cyanDim"
@@ -34,7 +36,7 @@ export default function Projects() {
                   rel="noreferrer"
                   className="flex items-center gap-1.5 text-blueprint-dim transition-colors hover:text-blueprint-cyan"
                 >
-                  Репозиторий <span>↗</span>
+                  {t.projectLabels.repo} <span>↗</span>
                 </a>
               )}
               {p.demoHref && (
@@ -44,7 +46,7 @@ export default function Projects() {
                   rel="noreferrer"
                   className="flex items-center gap-1.5 text-blueprint-amber transition-colors hover:text-blueprint-cyan"
                 >
-                  Live-демо <span>↗</span>
+                  {t.projectLabels.demo} <span>↗</span>
                 </a>
               )}
             </div>

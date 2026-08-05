@@ -1,13 +1,15 @@
-import { experience } from '../data/resume'
+import { useLanguage } from '../i18n/LanguageContext'
 import SectionHeading from './SectionHeading'
 
 export default function Experience() {
+  const { t } = useLanguage()
+
   return (
     <section id="experience" className="mx-auto max-w-5xl px-6 py-20">
-      <SectionHeading eyebrow="// компетенция" title="Опыт работы" />
+      <SectionHeading eyebrow={t.sections.experience.eyebrow} title={t.sections.experience.title} />
 
       <div className="mt-10 space-y-10 border-l border-blueprint-line pl-8">
-        {experience.map((job, i) => (
+        {t.experience.map((job, i) => (
           <div key={i} className="reveal relative" style={{ animationDelay: `${i * 100}ms` }}>
             <span className="absolute -left-[37px] top-1.5 h-2.5 w-2.5 rounded-full border border-blueprint-cyan bg-blueprint-bg" />
             <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 font-mono text-xs text-blueprint-cyanDim">

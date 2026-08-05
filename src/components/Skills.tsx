@@ -1,14 +1,16 @@
-import { skillGroups } from '../data/resume'
+import { useLanguage } from '../i18n/LanguageContext'
 import SectionHeading from './SectionHeading'
 
 export default function Skills() {
+  const { t } = useLanguage()
+
   return (
     <section id="skills" className="border-y border-blueprint-line/60 bg-blueprint-panel/40">
       <div className="mx-auto max-w-5xl px-6 py-20">
-        <SectionHeading eyebrow="// стек" title="Навыки" />
+        <SectionHeading eyebrow={t.sections.skills.eyebrow} title={t.sections.skills.title} />
 
         <div className="mt-10 grid gap-8 sm:grid-cols-2">
-          {skillGroups.map((group, i) => (
+          {t.skillGroups.map((group, i) => (
             <div key={group.title} className="reveal" style={{ animationDelay: `${i * 80}ms` }}>
               <h3 className="font-mono text-xs uppercase tracking-wider text-blueprint-cyanDim">
                 {group.title}

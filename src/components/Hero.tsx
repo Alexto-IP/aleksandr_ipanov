@@ -1,12 +1,15 @@
-import { profile } from '../data/resume'
+import { useLanguage } from '../i18n/LanguageContext'
 
 export default function Hero() {
+  const { t } = useLanguage()
+  const { profile, hero } = t
+
   return (
     <section id="top" className="mx-auto max-w-5xl px-6 pb-16 pt-16 md:pt-24">
       <div className="reveal grid gap-10 md:grid-cols-[1fr_auto] md:items-center">
         <div>
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-blueprint-cyanDim">
-            // паспорт специалиста
+            {hero.eyebrow}
           </p>
           <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-blueprint-paper md:text-6xl">
             {profile.name}
@@ -16,15 +19,15 @@ export default function Hero() {
 
           <dl className="mt-8 grid max-w-md grid-cols-2 gap-x-6 gap-y-3 border-t border-blueprint-line pt-6 font-mono text-xs">
             <div>
-              <dt className="text-blueprint-cyanDim">СТАТУС</dt>
+              <dt className="text-blueprint-cyanDim">{hero.statusLabel}</dt>
               <dd className="mt-1 text-blueprint-paper">{profile.status}</dd>
             </div>
             <div>
-              <dt className="text-blueprint-cyanDim">ОПЫТ</dt>
+              <dt className="text-blueprint-cyanDim">{hero.experienceLabel}</dt>
               <dd className="mt-1 text-blueprint-paper">{profile.experienceYears}</dd>
             </div>
             <div>
-              <dt className="text-blueprint-cyanDim">ДОСТУПНОСТЬ</dt>
+              <dt className="text-blueprint-cyanDim">{hero.availabilityLabel}</dt>
               <dd className="mt-1 text-blueprint-amber">{profile.availability}</dd>
             </div>
           </dl>
@@ -34,13 +37,13 @@ export default function Hero() {
               href="#contact"
               className="rounded-sm border border-blueprint-cyan/60 bg-blueprint-cyan/10 px-5 py-2.5 font-mono text-sm text-blueprint-cyan transition-colors hover:bg-blueprint-cyan/20"
             >
-              Связаться
+              {hero.contactCta}
             </a>
             <a
               href="#projects"
               className="rounded-sm border border-blueprint-line px-5 py-2.5 font-mono text-sm text-blueprint-dim transition-colors hover:border-blueprint-cyanDim hover:text-blueprint-paper"
             >
-              Смотреть проекты
+              {hero.projectsCta}
             </a>
           </div>
         </div>
