@@ -209,6 +209,13 @@ export const content: Record<Lang, ContentBundle> = {
         demoHref: 'https://alexto-ip.github.io/quizmaster',
       },
       {
+        name: 'Moon courier crisis',
+        description: 'Web-игра симулятор доставки на луне',
+        stack: ['JavaScript'],
+        href: 'https://github.com/Alexto-IP/Moon-Courier-Crisis',
+        demoHref: 'https://alexto-ip.github.io/Moon-Courier-Crisis/',
+      },
+      {
         name: 'aspectus-web',
         description: 'Фронтенд веб-приложения Aspectus.',
         stack: ['JavaScript'],
@@ -358,6 +365,13 @@ export const content: Record<Lang, ContentBundle> = {
         stack: ['TypeScript'],
         href: 'https://github.com/Alexto-IP/quizmaster',
         demoHref: 'https://alexto-ip.github.io/quizmaster',
+      },
+      {
+        name: 'Moon courier crisis',
+        description: 'Web-game simulator of Moon delivery',
+        stack: ['JavaScript'],
+        href: 'https://github.com/Alexto-IP/Moon-Courier-Crisis',
+        demoHref: 'https://alexto-ip.github.io/Moon-Courier-Crisis/',
       },
       {
         name: 'aspectus-web',
