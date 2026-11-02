@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Цвета — каналы RGB, чтобы работали модификаторы прозрачности (bg-accent/10).
+   Фирменный акцент #490000 = 73 0 0. */
+:root {
+  --bg: 252 251 250;
+  --panel: 245 243 241;
+  --line: 229 225 222;
+  --ink: 24 20 20;
+  --muted: 108 101 101;
+  --accent: 73 0 0;
+  --accent-solid: 73 0 0;
+  --on-solid: 255 255 255;
+}
+
+/* #490000 на тёмном фоне почти не читается как текст, поэтому в тёмной теме
+   текстовый акцент — осветлённый оттенок, а заливки остаются #490000 */
+:root.dark {
+  --bg: 12 10 10;
+  --panel: 22 18 18;
+  --line: 46 39 39;
+  --ink: 240 236 236;
+  --muted: 163 154 154;
+  --accent: 224 142 142;
+  --accent-solid: 73 0 0;
+  --on-solid: 255 238 238;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-bg font-sans text-ink antialiased;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+::selection {
+  @apply bg-solid text-onsolid;
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--accent));
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: reveal 0.55s ease-out forwards;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
