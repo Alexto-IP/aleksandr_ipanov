@@ -57,56 +57,6 @@ export interface NavItem {
   href: string
 }
 
-export interface TechniqueItem {
-  id: string
-  title: string
-  description: string
-}
-
-export interface TechniquesUi {
-  // DebounceDemo
-  searchPlaceholder: string
-  typed: string
-  applied: string
-  nothing: string
-  // MemoDemo
-  rerenderParent: string
-  plainChild: string
-  memoChild: string
-  renders: string
-  // StreamDemo
-  sensor: string
-  pause: string
-  start: string
-  // OptimisticDemo
-  like: string
-  saving: string
-  saved: string
-  rolledBack: string
-  serverError: string
-  // SpotlightDemo
-  spotlightHint: string
-  // TokensDemo
-  pickAccent: string
-  previewButton: string
-  previewBadge: string
-  previewCard: string
-  // ContainerDemo
-  width: string
-  cardTitle: string
-  cardText: string
-}
-
-export interface TechniquesContent {
-  eyebrow: string
-  title: string
-  intro: string
-  tabs: { react: string; frontend: string }
-  react: TechniqueItem[]
-  frontend: TechniqueItem[]
-  ui: TechniquesUi
-}
-
 export interface ContentBundle {
   meta: { title: string; description: string }
   nav: NavItem[]
@@ -142,7 +92,6 @@ export interface ContentBundle {
   certificatesLabels: { issued: string; view: string }
   skillGroups: SkillGroup[]
   projects: Project[]
-  techniques: TechniquesContent
   contacts: ContactLink[]
   projectLabels: { repo: string; demo: string }
   educationDefaultLink: string
@@ -162,7 +111,6 @@ export const content: Record<Lang, ContentBundle> = {
       { label: 'Опыт', href: '#experience' },
       { label: 'Проекты', href: '#projects' },
       { label: 'Навыки', href: '#skills' },
-      { label: 'Приёмы', href: '#techniques' },
       { label: 'Образование', href: '#education' },
       { label: 'Сертификаты', href: '#certificates' },
       { label: 'Контакты', href: '#contact' },
@@ -344,49 +292,6 @@ export const content: Record<Lang, ContentBundle> = {
         href: 'https://github.com/Alexto-IP/tgbot_shop_py',
       },
     ],
-    techniques: {
-      eyebrow: '// приёмы',
-      title: 'Приёмы, которые я использую',
-      intro: 'Небольшие интерактивные демо техник из реальных проектов. Всё работает прямо здесь — попробуйте.',
-      tabs: { react: 'React', frontend: 'Frontend' },
-      react: [
-        { id: 'debounce', title: 'Debounce поиска', description: 'Значение применяется только после паузы в наборе: меньше лишних фильтраций и запросов к API.' },
-        { id: 'memo', title: 'memo + useCallback', description: 'Стабильная ссылка на колбэк позволяет memo пропускать лишние ререндеры. Сравните счётчики.' },
-        { id: 'stream', title: 'Поток данных в реальном времени', description: 'Показания устройства обновляются по таймеру; cleanup в useEffect останавливает интервал при паузе и размонтировании.' },
-        { id: 'optimistic', title: 'Оптимистичное обновление', description: 'Интерфейс реагирует мгновенно, а при ошибке сервера состояние откатывается.' },
-      ],
-      frontend: [
-        { id: 'spotlight', title: 'Spotlight без ререндеров', description: 'Координаты курсора пишутся прямо в CSS-переменные — React при этом не перерисовывается.' },
-        { id: 'tokens', title: 'Дизайн-токены', description: 'Один источник правды для цвета: меняется одна переменная — обновляется весь интерфейс.' },
-        { id: 'container', title: 'Container queries', description: 'Компонент подстраивается под ширину своего контейнера, а не окна браузера.' },
-      ],
-      ui: {
-        searchPlaceholder: 'Поиск по стеку…',
-        typed: 'введено',
-        applied: 'применено',
-        nothing: 'Ничего не найдено',
-        rerenderParent: 'Перерисовать родителя',
-        plainChild: 'Без memo',
-        memoChild: 'memo + useCallback',
-        renders: 'рендеров',
-        sensor: 'Датчик, °C',
-        pause: 'Пауза',
-        start: 'Старт',
-        like: 'Нравится',
-        saving: 'Сохраняем…',
-        saved: 'Сохранено',
-        rolledBack: 'Ошибка сервера — состояние откачено',
-        serverError: 'Имитировать ошибку сервера',
-        spotlightHint: 'Проведите курсором',
-        pickAccent: 'Акцентный цвет',
-        previewButton: 'Кнопка',
-        previewBadge: 'Бейдж',
-        previewCard: 'Карточка',
-        width: 'Ширина',
-        cardTitle: 'Карточка',
-        cardText: 'Перестраивается по ширине контейнера',
-      },
-    },
     contacts: [
       { label: 'Email', value: 'alex.ipanov@icloud.com', href: 'mailto:alex.ipanov@icloud.com' },
       { label: 'Telegram', value: '@tired_sasha', href: 'https://t.me/tired_sasha' },
@@ -408,7 +313,6 @@ export const content: Record<Lang, ContentBundle> = {
       { label: 'Experience', href: '#experience' },
       { label: 'Projects', href: '#projects' },
       { label: 'Skills', href: '#skills' },
-      { label: 'Techniques', href: '#techniques' },
       { label: 'Education', href: '#education' },
       { label: 'Certificates', href: '#certificates' },
       { label: 'Contact', href: '#contact' },
@@ -590,49 +494,6 @@ export const content: Record<Lang, ContentBundle> = {
         href: 'https://github.com/Alexto-IP/tgbot_shop_py',
       },
     ],
-    techniques: {
-      eyebrow: '// techniques',
-      title: 'Techniques I use',
-      intro: 'Small interactive demos of techniques from real projects. Everything works right here — give it a try.',
-      tabs: { react: 'React', frontend: 'Frontend' },
-      react: [
-        { id: 'debounce', title: 'Debounced search', description: 'The value is applied only after a pause in typing: fewer redundant filters and API calls.' },
-        { id: 'memo', title: 'memo + useCallback', description: 'A stable callback reference lets memo skip needless re-renders. Compare the counters.' },
-        { id: 'stream', title: 'Real-time data stream', description: 'Device readings update on a timer; the useEffect cleanup stops the interval on pause and unmount.' },
-        { id: 'optimistic', title: 'Optimistic update', description: 'The UI responds instantly and rolls the state back if the server fails.' },
-      ],
-      frontend: [
-        { id: 'spotlight', title: 'Spotlight without re-renders', description: 'Pointer coordinates are written straight into CSS variables, so React never re-renders.' },
-        { id: 'tokens', title: 'Design tokens', description: 'A single source of truth for color: change one variable and the whole UI follows.' },
-        { id: 'container', title: 'Container queries', description: 'A component adapts to the width of its container, not the browser window.' },
-      ],
-      ui: {
-        searchPlaceholder: 'Search the stack…',
-        typed: 'typed',
-        applied: 'applied',
-        nothing: 'Nothing found',
-        rerenderParent: 'Re-render parent',
-        plainChild: 'Without memo',
-        memoChild: 'memo + useCallback',
-        renders: 'renders',
-        sensor: 'Sensor, °C',
-        pause: 'Pause',
-        start: 'Start',
-        like: 'Like',
-        saving: 'Saving…',
-        saved: 'Saved',
-        rolledBack: 'Server error — state rolled back',
-        serverError: 'Simulate a server error',
-        spotlightHint: 'Move your cursor here',
-        pickAccent: 'Accent color',
-        previewButton: 'Button',
-        previewBadge: 'Badge',
-        previewCard: 'Card',
-        width: 'Width',
-        cardTitle: 'Card',
-        cardText: 'Reflows based on container width',
-      },
-    },
     contacts: [
       { label: 'Email', value: 'alex.ipanov@icloud.com', href: 'mailto:alex.ipanov@icloud.com' },
       { label: 'Telegram', value: '@tired_sasha', href: 'https://t.me/tired_sasha' },
