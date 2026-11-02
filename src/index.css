@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Цвета — каналы RGB, чтобы работали модификаторы прозрачности (bg-accent/10).
-   Фирменный акцент #490000 = 73 0 0. */
+
 :root {
   --bg: 252 251 250;
   --panel: 245 243 241;
@@ -15,8 +14,6 @@
   --on-solid: 255 255 255;
 }
 
-/* #490000 на тёмном фоне почти не читается как текст, поэтому в тёмной теме
-   текстовый акцент — осветлённый оттенок, а заливки остаются #490000 */
 :root.dark {
   --bg: 12 10 10;
   --panel: 22 18 18;
@@ -66,4 +63,66 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.spotlight {
+  background: radial-gradient(
+    200px circle at var(--x, 50%) var(--y, 50%),
+    rgb(var(--accent) / 0.25),
+    transparent 70%
+  );
+}
+
+.cq-wrap {
+  container-type: inline-size;
+  max-width: 100%;
+}
+.cq-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid rgb(var(--line));
+  border-radius: 0.75rem;
+  background: rgb(var(--bg));
+}
+.cq-thumb {
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.5rem;
+  background: rgb(var(--accent-solid) / 0.85);
+}
+@container (min-width: 340px) {
+  .cq-card {
+    flex-direction: row;
+    align-items: center;
+  }
+  .cq-thumb {
+    flex: none;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+
+.token-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.token-badge {
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--accent);
+  border-radius: 9999px;
+  color: color-mix(in srgb, var(--accent) 65%, rgb(var(--ink)));
+  font-size: 0.75rem;
+}
+.token-card {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 40%, transparent);
 }
