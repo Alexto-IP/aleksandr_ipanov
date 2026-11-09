@@ -23,6 +23,8 @@ export interface EducationEntry {
   degree: string
   school: string
   faculty: string
+  logo?: string
+  logoAlt?: string
   href?: string
   hrefLabel?: string
 }
@@ -198,6 +200,8 @@ export const content: Record<Lang, ContentBundle> = {
         year: '2027 (в процессе)',
         degree: 'Магистр',
         school: 'Университет ИТМО, Санкт-Петербург',
+        logo: 'logos/itmo-logo.png',
+        logoAlt: 'Логотип Университета ИТМО',
         faculty: 'Факультет программной инженерии и компьютерной техники, Веб-разработка',
         href: 'https://se.ifmo.ru/~s507218/',
         hrefLabel: 'Учебные проекты →',
@@ -206,6 +210,8 @@ export const content: Record<Lang, ContentBundle> = {
         year: '2025',
         degree: 'Бакалавр',
         school: 'СПбГУПТД, Санкт-Петербург',
+        logo: 'logos/sutd-logo.png',
+        logoAlt: 'Логотип СПбГУПТД',
         faculty: 'Институт информационных технологий и автоматизации, Прикладная информатика',
       },
       {
@@ -400,6 +406,8 @@ export const content: Record<Lang, ContentBundle> = {
         year: '2027 (in progress)',
         degree: "Master's degree",
         school: 'ITMO University, Saint Petersburg',
+        logo: 'logos/itmo-logo.png',
+        logoAlt: 'ITMO University logo',
         faculty: 'Faculty of Software Engineering and Computer Systems, Web Development',
         href: 'https://se.ifmo.ru/~s507218/',
         hrefLabel: 'Coursework projects →',
@@ -408,6 +416,8 @@ export const content: Record<Lang, ContentBundle> = {
         year: '2025',
         degree: "Bachelor's degree",
         school: 'SPbSUITD, Saint Petersburg',
+        logo: 'logos/sutd-logo.png',
+        logoAlt: 'SPbSUITD logo',
         faculty: 'Institute of Information Technologies and Automation, Applied Informatics',
       },
       {

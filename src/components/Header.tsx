@@ -25,8 +25,9 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-20 border-b border-line/70 bg-bg/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <a href="#top" className="text-sm font-semibold tracking-tight text-ink">
-          A.Ipanov
+        <a href="#top" className="flex flex-col text-sm font-semibold tracking-tight text-ink">
+          <span>A.Ipanov</span>
+          <span className="mt-0.5 text-[9px] font-medium uppercase tracking-[0.16em] text-muted">Frontend / Fullstack Development</span>
         </a>
         <nav className="hidden gap-7 text-sm text-muted md:flex">
           {t.nav.map((item) => (
