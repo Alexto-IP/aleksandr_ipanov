@@ -60,7 +60,7 @@ export interface NavItem {
 }
 
 export interface ContentBundle {
-  meta: { title: string; description: string }
+  meta: { title: string }
   nav: NavItem[]
   profile: {
     name: string
@@ -72,10 +72,8 @@ export interface ContentBundle {
     summary: string
   }
   hero: {
-    eyebrow: string
     statusLabel: string
     experienceLabel: string
-    availabilityLabel: string
     contactCta: string
     projectsCta: string
   }
@@ -96,7 +94,6 @@ export interface ContentBundle {
   projects: Project[]
   contacts: ContactLink[]
   projectLabels: { repo: string; demo: string }
-  educationDefaultLink: string
   themeLabels: { toLight: string; toDark: string }
   footer: { tagline: string }
 }
@@ -107,7 +104,6 @@ export const content: Record<Lang, ContentBundle> = {
   ru: {
     meta: {
       title: 'Александр Ипанов',
-      description: 'Портфолио и резюме Александра Ипанова, Web-разработчика (React, TypeScript, Vue)',
     },
     nav: [
       { label: 'Опыт', href: '#experience' },
@@ -128,10 +124,8 @@ export const content: Record<Lang, ContentBundle> = {
         'Web-разработчик с 3+ годами коммерческого опыта: специализируюсь на frontend (React, TypeScript, Vue), начинал с backend на Python и FastAPI. Довожу фичи до конца — от макетов в Figma до продакшн-интерфейса и интеграции с API для данных в реальном времени. Учусь в магистратуре ИТМО и всегда рад задачам на стыке frontend и backend.',
     },
     hero: {
-      eyebrow: '// паспорт специалиста',
       statusLabel: 'СТАТУС',
       experienceLabel: 'ОПЫТ',
-      availabilityLabel: 'ДОСТУПНОСТЬ',
       contactCta: 'Связаться',
       projectsCta: 'Смотреть проекты',
     },
@@ -300,20 +294,18 @@ export const content: Record<Lang, ContentBundle> = {
     ],
     contacts: [
       { label: 'Email', value: 'alex.ipanov@icloud.com', href: 'mailto:alex.ipanov@icloud.com' },
-      { label: 'Telegram', value: '@tired_sasha', href: 'https://t.me/tired_sasha' },
+      { label: 'Telegram', value: '@web_aleksandr', href: 'https://t.me/web_aleksandr' },
       { label: 'LinkedIn', value: 'linkedin.com/in/aleksandr-ipanov', href: 'https://www.linkedin.com/in/aleksandr-ipanov' },
       { label: 'GitHub', value: 'github.com/Alexto-IP', href: 'https://github.com/Alexto-IP' },
     ],
     projectLabels: { repo: 'Репозиторий', demo: 'Live-демо' },
     certificatesLabels: { issued: 'Выдан', view: 'Посмотреть сертификат' },
-    educationDefaultLink: 'Подробнее →',
     themeLabels: { toLight: 'Включить светлую тему', toDark: 'Включить тёмную тему' },
     footer: { tagline: 'сделано на React + TypeScript + Tailwind' },
   },
   en: {
     meta: {
       title: 'Aleksandr Ipanov',
-      description: 'Portfolio and resume of Aleksandr Ipanov, Web Software Engineer (React, TypeScript, Vue)',
     },
     nav: [
       { label: 'Experience', href: '#experience' },
@@ -334,10 +326,8 @@ export const content: Record<Lang, ContentBundle> = {
         'Web software engineer with 3+ years of commercial experience, specializing in frontend (React, TypeScript, Vue) after starting on the Python/FastAPI backend. I build complete features end to end — from turning Figma designs into production UI to integrating with backend APIs for real-time data. Pursuing a Master\'s at ITMO University and always on the lookout for interesting work at the intersection of frontend and backend.',
     },
     hero: {
-      eyebrow: '// specialist profile',
       statusLabel: 'STATUS',
       experienceLabel: 'EXPERIENCE',
-      availabilityLabel: 'AVAILABILITY',
       contactCta: 'Get in touch',
       projectsCta: 'View projects',
     },
@@ -506,13 +496,12 @@ export const content: Record<Lang, ContentBundle> = {
     ],
     contacts: [
       { label: 'Email', value: 'alex.ipanov@icloud.com', href: 'mailto:alex.ipanov@icloud.com' },
-      { label: 'Telegram', value: '@tired_sasha', href: 'https://t.me/tired_sasha' },
+      { label: 'Telegram', value: '@web_aleksandr', href: 'https://t.me/web_aleksandr' },
       { label: 'LinkedIn', value: 'linkedin.com/in/aleksandr-ipanov', href: 'https://www.linkedin.com/in/aleksandr-ipanov' },
       { label: 'GitHub', value: 'github.com/Alexto-IP', href: 'https://github.com/Alexto-IP' },
     ],
     projectLabels: { repo: 'Repository', demo: 'Live demo' },
     certificatesLabels: { issued: 'Issued', view: 'View certificate' },
-    educationDefaultLink: 'Learn more →',
     themeLabels: { toLight: 'Switch to light theme', toDark: 'Switch to dark theme' },
     footer: { tagline: 'built with React + TypeScript + Tailwind' },
   },

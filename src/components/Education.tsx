@@ -21,7 +21,7 @@ export default function Education() {
                 <h3 className="text-lg font-semibold tracking-tight text-ink">{e.degree}</h3>
                 <p className="mt-1 text-sm text-muted">{e.school}</p>
                 <p className="text-sm text-muted">{e.faculty}</p>
-                {e.href && <a href={e.href} target="_blank" rel="noreferrer" className="mt-2 inline-block text-sm font-medium text-accent transition-opacity hover:opacity-70">{e.hrefLabel ?? t.educationDefaultLink}</a>}
+                {e.href && e.hrefLabel && <a href={e.href} target="_blank" rel="noreferrer" className="mt-2 inline-block text-sm font-medium text-accent transition-opacity hover:opacity-70">{e.hrefLabel}</a>}
               </div>
             </div>
             <span className="whitespace-nowrap pl-0 text-sm text-muted sm:pl-4">{e.year}</span>
