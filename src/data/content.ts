@@ -251,7 +251,7 @@ export const content: Record<Lang, ContentBundle> = {
       { title: 'Языки и фреймворки', items: ['JavaScript', 'TypeScript', 'React', 'Redux Toolkit', 'Vue', 'React Testing Library'] },
       { title: 'UI и вёрстка', items: ['HTML5', 'CSS3', 'MUI', 'Bootstrap', 'Jinja', 'Figma', 'Адаптивная вёрстка'] },
       { title: 'Backend и данные', items: ['Python', 'FastAPI', 'Node.js', 'Express', 'SQLite', 'REST API'] },
-      { title: 'Инструменты', items: ['Git', 'GitLab', 'GitHub', 'GitHub Actions', 'CI/CD', 'npm', 'Vite', 'Docker'] },
+      { title: 'Инструменты', items: ['Git', 'GitLab', 'GitHub', 'GitHub Actions', 'CI/CD', 'npm', 'Vite', 'Docker', 'Codex', 'Claude Code'] },
     ],
     projects: [
       {
@@ -274,12 +274,6 @@ export const content: Record<Lang, ContentBundle> = {
         description: 'Web-игра симулятор доставки на луне',
         href: 'https://github.com/Alexto-IP/Moon-Courier-Crisis',
         demoHref: 'https://alexto-ip.github.io/Moon-Courier-Crisis/',
-      },
-      {
-        name: 'aspectus-web',
-        description: 'Фронтенд веб-приложения Aspectus.',
-        href: 'https://github.com/Alexto-IP/aspectus-web',
-        demoHref: 'https://alexto-ip.github.io/aspectus-web',
       },
       {
         name: 'REST-api-with-rec',
@@ -453,7 +447,7 @@ export const content: Record<Lang, ContentBundle> = {
       { title: 'Languages & Frameworks', items: ['JavaScript', 'TypeScript', 'React', 'Redux Toolkit', 'Vue', 'React Testing Library'] },
       { title: 'UI & Markup', items: ['HTML5', 'CSS3', 'MUI', 'Bootstrap', 'Jinja', 'Figma', 'Responsive Design'] },
       { title: 'Backend & Data', items: ['Python', 'FastAPI', 'Node.js', 'Express', 'SQLite', 'REST API'] },
-      { title: 'Tools', items: ['Git', 'GitLab', 'GitHub', 'GitHub Actions', 'CI/CD', 'npm', 'Vite', 'Docker'] },
+      { title: 'Tools', items: ['Git', 'GitLab', 'GitHub', 'GitHub Actions', 'CI/CD', 'npm', 'Vite', 'Docker', 'Codex', 'Claude Code'] },
     ],
     projects: [
       {
@@ -476,12 +470,6 @@ export const content: Record<Lang, ContentBundle> = {
         description: 'Web-game simulator of Moon delivery',
         href: 'https://github.com/Alexto-IP/Moon-Courier-Crisis',
         demoHref: 'https://alexto-ip.github.io/Moon-Courier-Crisis/',
-      },
-      {
-        name: 'aspectus-web',
-        description: 'Frontend of the Aspectus web application.',
-        href: 'https://github.com/Alexto-IP/aspectus-web',
-        demoHref: 'https://alexto-ip.github.io/aspectus-web',
       },
       {
         name: 'REST-api-with-rec',
